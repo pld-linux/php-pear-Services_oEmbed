@@ -1,25 +1,24 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Services
-%define		_subclass	oEmbed
 %define		_status		alpha
 %define		_pearname	Services_oEmbed
 Summary:	%{_pearname} - A package for consuming oEmbed
 Summary(pl.UTF-8):	%{_pearname} - pakiet do obsługi oEmebed
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	15a282c8c8e9cf285f1882fa3bd136e4
 URL:		http://pear.php.net/package/Services_oEmbed/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-HTTP_Request >= 1.4.3
 Requires:	php-pear-Net_URL2 >= 0.2.0
 Requires:	php-pear-PEAR >= 1.4.0b1
 Requires:	php-pear-Validate >= 0.8.1
+Requires:	php-xml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,9 +42,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
