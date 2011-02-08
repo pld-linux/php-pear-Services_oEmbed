@@ -5,7 +5,7 @@ Summary:	%{_pearname} - A package for consuming oEmbed
 Summary(pl.UTF-8):	%{_pearname} - pakiet do obsługi oEmebed
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,7 +16,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-curl
 Requires:	php-json
-Requires:	php-libxml
+#Requires:	php-libxml
 Requires:	php-pcre
 Requires:	php-pear
 Requires:	php-pear-HTTP_Request >= 1.4.3
