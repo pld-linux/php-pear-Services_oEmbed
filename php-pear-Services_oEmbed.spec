@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		alpha
 %define		_pearname	Services_oEmbed
 Summary:	%{_pearname} - A package for consuming oEmbed
